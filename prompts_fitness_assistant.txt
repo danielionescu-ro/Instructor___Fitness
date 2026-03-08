@@ -26,11 +26,16 @@ Clasa trebuie să:
 
   - Să returneze în final acest răspuns, în metoda 'assistant_response':
 
-        response = client.responses.create(
-            input="Explain the importance of fast language models",
+        response = self.client.chat.completions.create(
+            messages=[
+                {
+                    "role": "user",
+                    "content": "Explain the importance of fast language models"
+                }
+            ],
             model="openai/gpt-oss-20b",
         )
-        return response.output_text
+        return response.choices[0].message.content
 
 
 PROMPT 2 — Creează blocul principal:
