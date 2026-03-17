@@ -14,3 +14,4 @@ langchain-text-splitters==0.3.11
 setuptools<81
 tensorflow==2.16.2
 tensorflow-hub==0.16.1
+gradio==5.23.3
