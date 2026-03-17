@@ -11,3 +11,11 @@ pip install -r .\requirements.txt
 
 3. Testare:
 python src/services/fitness_assistant.py
+
+4. Pentru a rula testele din test_main rulați:
+în primul terminal: uvicorn app.main:app --reload
+și în al doilea terminal: pytest
+
+5. Pentru a rula metricile din evaluate rulați:
+în primul terminal: uvicorn app.main:app --reload
+și în al doilea terminal: python -m evaluation.evaluate
